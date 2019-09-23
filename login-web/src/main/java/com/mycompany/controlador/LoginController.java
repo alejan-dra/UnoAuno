@@ -5,7 +5,7 @@
  */
 package com.mycompany.controlador;
 
-import com.mycompany.dto.Usuario;
+import com.mycompany.dto.DTOUsuario;
 import com.mycompany.interfaces.ILoginSesion;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 public class LoginController implements Serializable{
 
-    private List<Usuario> listaUsuarios;
+    private List<DTOUsuario> listaUsuarios;
     private String username;
     private String password;
     
@@ -39,7 +39,7 @@ public class LoginController implements Serializable{
     }
     
     public String iniciarSesion(){
-        Usuario user;
+        DTOUsuario user;
         ejb.agregarUsuarios();
         user = ejb.obtenerUsuario(username, password);
         if(user!=null){

@@ -5,20 +5,17 @@
  */
 package com.mycompany.dto;
 
-import java.io.Serializable;
-
 /**
  *
- * @author lorena
  * @author alejandra
  */
-public class Usuario implements Serializable{
-    private String nombres;
+public class DTOUsuario {
+     private String nombres;
     private String rol;
     private String username;
     private String password;
 
-    public Usuario(String nombres, String rol, String username, String password) {
+    public DTOUsuario(String nombres, String rol, String username, String password) {
         this.nombres = nombres;
         this.rol = rol;
         this.username = username;
@@ -59,3 +56,4 @@ public class Usuario implements Serializable{
     
     
 }
+
